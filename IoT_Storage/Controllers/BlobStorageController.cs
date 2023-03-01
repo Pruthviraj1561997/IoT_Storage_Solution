@@ -18,10 +18,10 @@ namespace IoT_Storage.Controllers
         }
 
         [HttpPut("UpdateBlobContent")]
-        public async Task<BlobProperties> UpdateBlobContent(string blobName,string file)
+        public async Task UpdateBlobContent(string blobName,string file)
         {
             await BlobStorage.UpdateBlobContent(blobName,file);
-            return null;
+           
         }
 
         [HttpGet("GetBlobContent")]

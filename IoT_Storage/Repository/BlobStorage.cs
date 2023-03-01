@@ -68,7 +68,28 @@ namespace IoT_Storage.Repository
             }
         }
 
-        public static async Task<BlobProperties> UpdateBlobContent(string blobName, string file)
+        //public static async Task<BlobProperties> UpdateBlobContent(string blobName, string file)
+        //{
+        //    if (string.IsNullOrEmpty(blobName))
+        //    {
+        //        throw new ArgumentNullException("Enter Blob Name: ");
+        //    }
+        //    try
+        //    {
+        //        string filename = Path.GetTempFileName();
+        //        BlobContainerClient container = new BlobContainerClient(connectionString, blobName);
+        //        BlobClient blob = container.GetBlobClient(file);
+        //        await blob.UploadAsync(filename);
+        //        BlobProperties properties = await blob.GetPropertiesAsync();
+        //        return properties;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        public static async Task UpdateBlobContent(string blobName, string file)
         {
             if (string.IsNullOrEmpty(blobName))
             {
@@ -76,12 +97,13 @@ namespace IoT_Storage.Repository
             }
             try
             {
-                string filename = Path.GetTempFileName();
+                
                 BlobContainerClient container = new BlobContainerClient(connectionString, blobName);
                 BlobClient blob = container.GetBlobClient(file);
-                await blob.UploadAsync(filename);
-                BlobProperties properties = await blob.GetPropertiesAsync();
-                return properties;
+                var path = @"C:\Users\vmadmin\Desktop\IOT_301Project\IoT_Storage_Solution\IoT_Storage_Solution\IoT_Storage\TestDemo\MedicalDocument.pdf";
+               using FileStream uploadFile = File.OpenRead(path);
+                await blob.UploadAsync(uploadFile,true);
+                uploadFile.Close();
             }
             catch (Exception ex)
             {

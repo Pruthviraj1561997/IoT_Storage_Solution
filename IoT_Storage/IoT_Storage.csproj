@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <Folder Include="Download\" />
+    <Folder Include="TestDemo\" />
   </ItemGroup>
 
 </Project>
