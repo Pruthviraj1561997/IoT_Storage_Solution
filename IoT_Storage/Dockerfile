@@ -9,7 +9,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY [IoT_Storage.csproj", "./"]
+COPY ["IoT_Storage.csproj", "./"]
 RUN dotnet restore "IoT_Storage.csproj"
 COPY . .
 WORKDIR "/src/."
