@@ -6,7 +6,7 @@ namespace IoT_Storage.Repository
 {
     public class Queue
     {
-        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=demostorage1211;AccountKey=gUWuFkJ0/bxQEEHVWfoOZpzFoHOCpeUZp04NzsHVrI4ivHdQUuzoChtBatoK1mbqtun4158Gqk9n+ASt3Wmrzw==;EndpointSuffix=core.windows.net";
+        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=storagetestpruthvi;AccountKey=MG6MLahhtCDT2UZrOMgDQAegWxJ7d5wbXlg3NrlwncrMuVpVNlinsMDmIX+S6Xz9iBMV1Wm2yFbm+AStw4uhUg==;EndpointSuffix=core.windows.net";
 
 
         public static async Task<bool> CreateQueue(string queueName)

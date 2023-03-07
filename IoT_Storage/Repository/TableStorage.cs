@@ -6,7 +6,7 @@ namespace IoT_Storage.Repository
 {
     public class TableStorage
     {
-        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=demostorage1211;AccountKey=gUWuFkJ0/bxQEEHVWfoOZpzFoHOCpeUZp04NzsHVrI4ivHdQUuzoChtBatoK1mbqtun4158Gqk9n+ASt3Wmrzw==;EndpointSuffix=core.windows.net";
+        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=storagedemopruthvi;AccountKey=HCA9zCOKxgf/b1b8PBbyk3lEPvAQn4CJcIr1PUOLSjP74i/Gzw2Uh1jr+AqdR1tFoaNvffFuRIrt+AStZMKICA==;EndpointSuffix=core.windows.net";
 
         public static async Task AddTable(string tableName)
         {
