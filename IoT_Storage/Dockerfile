@@ -6,14 +6,13 @@
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["IoT_Storage/IoT_Storage.csproj", "IoT_Storage/"]
-RUN dotnet restore "IoT_Storage/IoT_Storage.csproj"
+COPY [IoT_Storage.csproj", "./"]
+RUN dotnet restore "IoT_Storage.csproj"
 COPY . .
-WORKDIR "/src/IoT_Storage"
+WORKDIR "/src/."
 RUN dotnet build "IoT_Storage.csproj" -c Release -o /app/build
 
 FROM build AS publish
