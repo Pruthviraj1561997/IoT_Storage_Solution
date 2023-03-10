@@ -8,7 +8,7 @@ namespace IoT_Storage.Repository
 {
     public class BlobStorage
     {
-        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=pruthvirajstorage;AccountKey=xYT/zH84pix1VicRRSh1KT+I7K45aP1c/wxbmH3gIwzZ1qBcCmK6BaseVaRy2o5X4fXzHAE8qo6K+ASt7kAaYg==;EndpointSuffix=core.windows.net";
+        public static string connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountpruthvi;AccountKey=mtE5UVIgVxARUPxKUQVsu6zNdSE4SAmc4JG1Wf9GBCHm426t6wEuENOYhjyVXkjTyK+wIoFkZdA6+AStE3g46A==;EndpointSuffix=core.windows.net";
 
         public static async Task CreateBlob(string blobName)
         {
